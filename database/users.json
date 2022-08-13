@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "62adf2a75684c5824b5310bf"
+  },
+  "name": "John",
+  "surname": "Doe",
+  "username": "John.Doe",
+  "password": "64d09d9930c8ecf79e513167a588cb75439b762ce8f9b22ea59765f32aa74ca19d2f1e97dc922a3d4954594a05062917fb24d1f8e72f2ed02a58ed7534f94d27",
+  "history": [],
+  "preferences": {
+    "primary_dns": "8.8.8.8",
+    "secondary_dns": "8.8.8.4"
+  }
+}]
