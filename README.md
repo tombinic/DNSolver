@@ -21,8 +21,6 @@ You can find informations about the library used at
      - [Login](#login)
      - [Signup](#signup)
      - [Dashboard](#dashboard)
-     - [APIs](#apis)
-     - [Profile](#profile)
   - :factory:[Demo](#demo-)
 ---
 
@@ -116,39 +114,54 @@ As you can see from the code above, despite is only an example, "username" is th
 
 ## Frontend 💻
 > The frontend concerns the graphic representation of the application, designed and developed exclusively in React.
-Of greater importance are the fetch APIs that allow you to make any type of HTTP request to the backend part. Material-Ui, React's main graphics library, was used for the entire frontend part.
-At the bottom right of all pages there is a customizable style configuration panel to your taste.
+Of greater importance are the axios module that allow you to make any type of HTTP request to the backend part. Material-Ui, React's main graphics library, was used for the entire frontend part.
   
 ### Login 
-In this section you can log into the application. The user enters their credentials (username, password) and if they are correct they will be redirected to the dashboard. Otherwise the error will be communicated. It is important to note that before sending the data to the backend, the sha256 hash of the password is performed. The login information is kept locally to prevent the user from having to re-enter the credentials every time the user accesses the website: when you log out and access the application later, the credentials will be requested.
+In this section you can log into the application. The user enters their credentials (username, password) and if they are correct they will be redirected to the dashboard. Otherwise the error will be communicated. It is important to note that before sending the data to the backend, the sha256 hash of the password is performed. If the user selected "remember me" checkbox, the login information is kept locally to prevent the user from having to re-enter the credentials every time the user accesses the website: when you log out and access the application later, the credentials will be requested.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/177222735-a67d33d2-b6ba-493f-9ac0-0c7453660931.png" alt="alt text" width="500"/>
-
+<img src="https://user-images.githubusercontent.com/91635053/184531104-6fe4caf5-8b1b-4d6b-9aa7-1609cdd0dfbf.png" alt="alt text" width="500"/>
+  
 ### Signup 
 In this section, unregistered users can register and access the system. All this is only possible only if a user with the same username does not already exist. If the registration part is successful, the user will be redirected to the dashboard.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/177222833-71b81478-5f5c-4dce-b1fa-30f25bbfc314.png" alt="alt text" width="500"/>
+<img src="https://user-images.githubusercontent.com/91635053/184531326-b2b8809b-a6bf-4eba-85d9-0bbbedd05104.png" alt="alt text" width="500"/>
+
   
 ### Dashboard 
-Some sections can be identified in the system dashboard: at the top there is a list of all the topics available with the possibility of navigating freely through them. Once you select your favorite topic, it will appear in the central section where you can read its text. Finally, at the bottom, there is the appropriate space to write and send the application. Once the server has processed the response, it will be indicated by underlining the corresponding part directly in the text.
+In the dashboard we can access the user menu at the top right, and we can carry out the
+logout, delete the history and set our favorite DNS.
+Centrally we find a bar where you can specify the host or domain to which you are
+wants to perform the DNS query and through the checkboxes you can select one or more types of
+executable queries, by pressing the query button the queries are executed.
+While typing in the search bar, you can select one of the options proposed by the
+chronology.
+The results will appear in the table below the bar, if the results are multiple it is possible
+view its details by expanding the table.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91635053/184531402-460ea486-9f59-43d2-b727-95b27a921f5d.png" alt="alt text" width="500"/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91635053/184531407-bcb77f48-4b5d-4468-a669-a183fb673f62.png" alt="alt text" width="500"/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91635053/184531410-6b9cf343-0a2d-4e21-9e4d-bb07d8d2ce64.png" alt="alt text" width="500"/>
   
-<p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/177223248-f534a86f-de92-4f6c-ae68-8b58074de6a3.png" alt="alt text" width="500"/>
-<p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/177223263-da117c76-fd49-4bf7-a21d-d606f1851d82.png" alt="alt text" width="500"/>
+The types of queries that can be performed are:
+- **MX**: resolves MX records
+- **AAAA**: from hostname to IPv6
+- **IP**: from IP to hostname
+- **SOA**: resolves SOA records
+- **CAA**: resolves CAA records
+- **LOOKUP**: performs lookup on a service at a specific address
+- **CNAME**: resolves CNAME records
+- **A**: from hostname to IPv4
+- **NS**: resolves NS records
+- **SRV**: resolves SRV records
+- **PTR**: resolves PTR records
+- **TXT**: returns TXT records
+- **ANY**: returns all DNS records for the carried out research
   
-### APIs 
-The backend provides several APIs: this page allows you to query them. By clicking on "complete url" you can send the request, and the response will be shown in the form of a JSON file in a new browser tab.
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/177223352-b147e07a-acfb-4184-bdd6-5714a24e3144.png" alt="alt text" width="500"/>
-
-### Profile 
-In this personal section, the user can view his information. While in the lower part there is a reference to the list of topics present in the system. When you select a specific one, you will be redirected to the dashboard with the selected topic active
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/177223419-366a28c3-ffe8-4cf2-90bd-3fc622699601.png" alt="alt text" width="500"/>
-<p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/177223446-d62e75b4-8b42-4f19-b7b1-cd231e0a5101.png" alt="alt text" width="500"/>
+## Demo 🏭
+You can find a fully working demo at this address:
+> https://dnsolver.herokuapp.com/
