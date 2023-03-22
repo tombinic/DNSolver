@@ -36,7 +36,7 @@ It was decided to divide the system into two macro areas: frontend and backend.
 Below is the general logic diagram of the application.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/184530190-57b5ea36-982f-402d-a8be-ba90e8e66ed6.png" alt="alt text" width="900"/>
+<img src="https://user-images.githubusercontent.com/91635053/184530190-57b5ea36-982f-402d-a8be-ba90e8e66ed6.png" alt="alt text" width="500"/>
 
 
 ## Backend 🔧
